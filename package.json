@@ -4,8 +4,15 @@
   "description": "Wordpress Theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start ./blocks/*/*.js",
+    "build": "wp-scripts build ./blocks/*/*.js"
+
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@wordpress/i18n": "^4.28.0",
+    "@wordpress/scripts": "^25.5.1"
+  }
 }

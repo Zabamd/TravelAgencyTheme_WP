@@ -2,12 +2,6 @@
   "name": "zabamd/travel-agency-theme",
   "description": "Wordpress Theme",
   "type": "theme",
-  "autoload": {
-    "psr-4": {
-      "Zabamd\\TravelAgencyTheme\\": "src/",
-      "Zabamd\\TravelAgencyTheme\\Utility": "./utility/"
-    }
-  },
   "authors": [
     {
       "name": "Amadeusz Zabierowski",

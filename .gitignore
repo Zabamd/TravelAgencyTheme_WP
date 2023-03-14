@@ -1,2 +1,3 @@
-/node/
+/node*/
 /vendor/
+node_modules
