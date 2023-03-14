@@ -7,11 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wp-scripts start ./blocks/*/*.js",
     "build": "wp-scripts build ./blocks/*/*.js"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@wordpress/block-editor": "^11.5.0",
+    "@wordpress/components": "^23.5.0",
     "@wordpress/i18n": "^4.28.0",
     "@wordpress/scripts": "^25.5.1"
   }
