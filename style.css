@@ -3,3 +3,15 @@ Theme name: Travel Agency Theme
 Version: 1.0.0
 Author: Amadeusz 
 */
+
+@font-face {
+	font-family: Golos;
+	src: url("./assets/font/GolosText-VariableFont_wght.ttf");
+}
+
+body {
+	font-family: Golos;
+	background-color: var(--wp--preset--color--ta-background);
+	margin: 0px;
+	padding: 0px;
+}

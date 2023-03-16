@@ -1,4 +1,60 @@
-.banner_text {
-  font-size: 99px;
-  color: red;
+.menuButton {
+	border: 1px solid black;
+	border-radius: 20px;
+}
+.bannerEditorScreenWrapper {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	@mixin headingText {
+		color: #fff;
+		text-shadow: 0px 0px 5px var(--wp--preset--color--ta-black);
+		margin: 1rem 0px 1rem 2vw;
+		font-weight: bold;
+	}
+
+	.mainHeading {
+		@include headingText;
+		font-size: 84px;
+	}
+	.topHeading {
+		@include headingText;
+		font-size: 42px;
+	}
+	.buttonHeading {
+		@include headingText;
+		font-size: 24px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			& > a {
+				color: var(--wp--preset--color--ta-black);
+			}
+			text-shadow: none;
+			background-color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.bannerEditorScreenWrapper {
+		.mainHeading {
+			font-size: 52px;
+		}
+		.topHeading {
+			font-size: 32px;
+		}
+		.buttonHeading {
+			font-size: 16px;
+		}
+	}
 }
