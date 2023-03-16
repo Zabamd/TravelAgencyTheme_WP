@@ -1,3 +1,4 @@
+import { InnerBlocks } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import Card from './Card/card';
@@ -8,17 +9,20 @@ registerBlockType( 'travelagencytheme/destinations', {
 	category: 'travel-agency-theme',
 	attributes: {
 		Destinations: {
-			type: 'string',
+			type: 'array',
 		},
 	},
 	edit: EditComponent,
 	save: SaveComponent,
 } );
 
+
 function EditComponent() {
 	return (
 		<>
-			<h1>Editor Screen</h1>
+		<InnerBlocks />
+			<h1 className="segmentHeader"></h1>
+			<p className="segmentText"></p>
 		</>
 	);
 }
