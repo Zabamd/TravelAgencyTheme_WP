@@ -1,11 +1,11 @@
-import { InnerBlocks } from '@wordpress/block-editor';
+import './satisfaction.scss';
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import './destinations.scss';
+import {InnerBlocks} from '@wordpress/block-editor';
 
-registerBlockType( 'travelagencytheme/destinations', {
-	title: __( 'Destinations' ),
-	label: __( 'Destinations' ),
+registerBlockType( 'travelagencytheme/satisfaction', {
+	title: __( 'Satisfaction Section' ),
+	label: __( 'Satisfaction Section' ),
 	category: 'travel-agency-theme',
 	edit: EditComponent,
 	save: SaveComponent,
@@ -24,24 +24,21 @@ function EditComponent() {
 		[
 			'core/group',
 			{
-				className: 'cardWrapper',
+				className: 'satisfactionCardWrapper',
 				layout: { type: 'flex', flexWrap: 'nowrap' },
 			},
 			[
-				[ 'travelagencytheme/destination-card' ],
-				[ 'travelagencytheme/destination-card' ],
-				[ 'travelagencytheme/destination-card' ],
+				[ 'travelagencytheme/satisfaction-card' ],
+				[ 'travelagencytheme/satisfaction-card' ],
 			],
 		],
 	];
-
 	return (
 		<div className="sectionWrapper">
 			<InnerBlocks template={ blockTemplate } templateLock="insert" />
 		</div>
 	);
 }
-
 function SaveComponent() {
 	return (
 		<div className="sectionWrapper">
