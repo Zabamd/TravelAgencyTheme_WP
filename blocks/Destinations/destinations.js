@@ -1,6 +1,7 @@
 import { InnerBlocks } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
+import './destinations.scss';
 
 registerBlockType( 'travelagencytheme/destinations', {
 	title: __( 'Destinations' ),
@@ -23,7 +24,7 @@ function EditComponent() {
 		],
 		[
 			'core/paragraph',
-			{ placeholder: 'Section Content', className: 'SectionParagraph' },
+			{ placeholder: 'Section Content', className: 'sectionParagraph' },
 		],
 		[
 			'core/group',
@@ -40,16 +41,16 @@ function EditComponent() {
 	];
 
 	return (
-		<>
+		<div className="sectionWrapper">
 			<InnerBlocks template={ blockTemplate } templateLock="insert" />
-		</>
+		</div>
 	);
 }
 
 function SaveComponent() {
 	return (
-		<>
+		<div className="sectionWrapper">
 			<InnerBlocks.Content />
-		</>
+		</div>
 	);
 }

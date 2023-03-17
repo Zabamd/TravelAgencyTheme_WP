@@ -1,0 +1,47 @@
+.destinationCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	width: 20vw;
+	height: 55vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 25px;
+
+	transition: all ease-in-out 0.5s;
+	&:hover {
+		width: 22.5vw;
+		height: 57.5vh;
+	}
+
+	@mixin cardText {
+		color: #fff;
+		text-shadow: 0px 0px 5px var(--wp--preset--color--ta-black);
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
+
+	.destinationCardName {
+		@include cardText;
+		font-size: 64px;
+		font-family: inherit;
+	}
+	.destinationCardPrice {
+		@include cardText;
+		font-size: 36px;
+		font-family: inherit;
+		margin-bottom: 3rem;
+	}
+}
+@media screen and (max-width: 1080px) {
+	.destinationCard {
+		width: 90vw;
+		height: 55vh;
+        &:hover {
+            width: 92.5vw;
+            height: 57.5vh;
+        }
+	}
+}

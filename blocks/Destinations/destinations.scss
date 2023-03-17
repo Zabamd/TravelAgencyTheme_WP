@@ -1,0 +1,12 @@
+.cardWrapper {
+	margin: 0 5rem;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+}
+@media screen and (max-width: 1080px) {
+	.cardWrapper {
+		flex-direction: column;
+		margin: 0 1rem;
+	}
+}

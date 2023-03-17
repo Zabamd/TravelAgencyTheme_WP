@@ -1,3 +1,8 @@
+import './destination-card.scss';
+import PlaceholderImage from '../../assets/image/Destination1.png';
+
+import { registerBlockType } from '@wordpress/blocks';
+import { __ } from '@wordpress/i18n';
 import { Button, PanelBody, PanelRow } from '@wordpress/components';
 import {
 	InnerBlocks,
@@ -5,8 +10,6 @@ import {
 	MediaUpload,
 	MediaUploadCheck,
 } from '@wordpress/block-editor';
-import { registerBlockType } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
 
 registerBlockType( 'travelagencytheme/destination-card', {
 	title: __( 'Destination Card' ),
@@ -15,7 +18,7 @@ registerBlockType( 'travelagencytheme/destination-card', {
 	attributes: {
 		imageURL: {
 			type: 'string',
-			default: '',
+			default: PlaceholderImage,
 		},
 	},
 	edit: EditComponent,
