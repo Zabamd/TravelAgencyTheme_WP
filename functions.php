@@ -38,4 +38,7 @@ $init = new TravelAgencyTheme();
 
 //Blocks Init
 $banner = new BlockModel("banner");
+$destinations = new BlockModel("destinations");
+$destination_card = new BlockModel("destination-card");
+
 ?>
