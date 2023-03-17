@@ -1,14 +1,13 @@
 import { InnerBlocks } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import Card from './Card/card';
 
 registerBlockType( 'travelagencytheme/destinations', {
 	title: __( 'Destinations' ),
 	label: __( 'Destinations' ),
 	category: 'travel-agency-theme',
 	attributes: {
-		Destinations: {
+		DestinationsList: {
 			type: 'array',
 		},
 	},
@@ -16,13 +15,33 @@ registerBlockType( 'travelagencytheme/destinations', {
 	save: SaveComponent,
 } );
 
-
 function EditComponent() {
+	const blockTemplate = [
+		[
+			'core/heading',
+			{ placeholder: 'Section Heading', className: 'sectionHeading' },
+		],
+		[
+			'core/paragraph',
+			{ placeholder: 'Section Content', className: 'SectionParagraph' },
+		],
+		[
+			'core/group',
+			{
+				className: 'cardWrapper',
+				layout: { type: 'flex', flexWrap: 'nowrap' },
+			},
+			[
+				[ 'travelagencytheme/destination-card' ],
+				[ 'travelagencytheme/destination-card' ],
+				[ 'travelagencytheme/destination-card' ],
+			],
+		],
+	];
+
 	return (
 		<>
-		<InnerBlocks />
-			<h1 className="segmentHeader"></h1>
-			<p className="segmentText"></p>
+			<InnerBlocks template={ blockTemplate } templateLock="insert" />
 		</>
 	);
 }
@@ -30,8 +49,7 @@ function EditComponent() {
 function SaveComponent() {
 	return (
 		<>
-			<h1>Text</h1>
-			<Card />
+			<InnerBlocks.Content />
 		</>
 	);
 }
